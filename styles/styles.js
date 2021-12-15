@@ -1,4 +1,4 @@
-import styled, { createGlobalStyle, css } from "styled-components";
+import { css } from "styled-components";
 
 export const Reset = css`
   margin: 0;
