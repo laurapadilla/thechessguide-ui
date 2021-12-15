@@ -1,7 +1,7 @@
-import { sanityClient } from '../sanity';
+import { sanityClient } from "../sanity";
 
 const Home = () => {
-  return <></>;
+  return <>Left col navigation</>;
 };
 
 export const getServerSideProps = async () => {

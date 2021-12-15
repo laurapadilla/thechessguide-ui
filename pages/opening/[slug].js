@@ -1,44 +1,41 @@
 import React from "react";
-import { sanityClient } from "../../sanity";
-import styled from "styled-components";
-
-const Container = styled.main`
-  background-color: aliceblue;
-  padding: 4rem;
-`;
-
-const OpeningName = styled.h1`
-  font-size: 2.25rem;
-`;
-const Moves = styled.h4`
-  font-size: 2rem;
-  font-weight: normal;
-`;
-
-export const Sup = styled.sup`
-  font-size: 1.5rem;
-  vertical-align: top;
-  margin-right: 1rem;
-`;
-
-const Description = styled.p`
-  font-size: 1rem;
-  color: gray;
-`;
+import { sanityClient, PortableText } from "../../sanity";
+import {
+  Black,
+  Container,
+  OpeningDetails,
+  OpeningName,
+  Moves,
+  Description,
+  White,
+  Sup,
+} from "./styles";
+import Link from "next/link";
 
 const Opening = ({ name, id, description, piece, moves, resources }) => {
+  console.log(resources);
   return (
-    <Container>
-      <article>
-        <OpeningName>
-          <Sup>{id}</Sup>
-          {name}
-        </OpeningName>
-      </article>
-      <p>{piece}</p>
-      <Moves>{moves}</Moves>
-      <Description>{description}</Description>
-    </Container>
+    <>
+      <Container>
+        <OpeningDetails>
+          <OpeningName>
+            <Sup>{id}</Sup>
+            {name}
+          </OpeningName>
+          {piece === "black" ? <Black /> : <White />}
+        </OpeningDetails>
+        <Moves>{moves}</Moves>
+        <Description>
+          <PortableText blocks={description} />
+        </Description>
+        {resources.map((item, index) => (
+          <div key={index}>
+            <Link href={item.url}>{item.resourceName}</Link>
+          </div>
+        ))}
+      </Container>
+      <Link href="/">Back</Link>
+    </>
   );
 };
 
