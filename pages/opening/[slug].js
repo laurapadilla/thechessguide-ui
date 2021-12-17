@@ -1,4 +1,5 @@
 import React from "react";
+import { ArrowLeft } from "react-feather";
 import { sanityClient, PortableText } from "../../sanity";
 import {
   Black,
@@ -9,10 +10,11 @@ import {
   Description,
   White,
   Sup,
+  BackLinkWrapper,
 } from "./styles";
 import Link from "next/link";
 
-const Opening = ({ name, id, description, piece, moves, resources }) => {
+const Opening = ({ name, id, fullDescription, piece, moves, resources }) => {
   console.log(resources);
   return (
     <>
@@ -26,15 +28,18 @@ const Opening = ({ name, id, description, piece, moves, resources }) => {
         </OpeningDetails>
         <Moves>{moves}</Moves>
         <Description>
-          <PortableText blocks={description} />
+          <PortableText blocks={fullDescription} />
         </Description>
         {resources.map((item, index) => (
           <div key={index}>
             <Link href={item.url}>{item.resourceName}</Link>
           </div>
         ))}
+        <BackLinkWrapper>
+          <ArrowLeft />
+          <Link href="/">Openings</Link>
+        </BackLinkWrapper>
       </Container>
-      <Link href="/">Back</Link>
     </>
   );
 };
@@ -43,7 +48,7 @@ export const getServerSideProps = async (pageContext) => {
   const pageSlug = pageContext.query.slug;
 
   const query = `*[ _type == "opening" && slug.current == $pageSlug][0] {
-    name, id, piece, description, moves, resources[]{...}
+    name, id, piece, blurb, fullDescription, moves, resources[]{...}
   }`;
   const opening = await sanityClient.fetch(query, { pageSlug });
 
@@ -57,7 +62,8 @@ export const getServerSideProps = async (pageContext) => {
       props: {
         name: opening.name,
         id: opening.id,
-        description: opening.description,
+        blurb: opening.blurb,
+        fullDescription: opening.fullDescription,
         piece: opening.piece,
         moves: opening.moves,
         resources: opening.resources,

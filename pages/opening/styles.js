@@ -2,9 +2,9 @@ import styled from "styled-components";
 import { Reset } from "../../styles/styles";
 
 export const Container = styled.main`
-  background-color: aliceblue;
-  padding: 4rem;
-  border-bottom: 1px solid black;
+  position: relative;
+  background-color: lightcyan;
+  padding-bottom: 4rem;
 `;
 
 export const OpeningDetails = styled.article`
@@ -49,4 +49,9 @@ export const Black = styled(piece)`
 export const White = styled(piece)`
   background-color: white;
   border: 1px solid black;
+`;
+
+export const BackLinkWrapper = styled.div`
+  position: absolute;
+  bottom: 0;
 `;
