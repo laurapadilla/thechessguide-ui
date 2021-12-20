@@ -1,7 +1,9 @@
 import React from "react";
 import { ArrowLeft } from "react-feather";
 import { sanityClient, PortableText } from "../../sanity";
+
 import {
+  Text,
   Black,
   Container,
   OpeningDetails,
@@ -11,9 +13,7 @@ import {
   Sup,
   BackLinkWrapper,
   Wrapper,
-} from "./styles";
-
-import { Text } from "../../styles/styles";
+} from "../../styles/styles";
 import Link from "next/link";
 
 const Opening = ({ name, id, fullDescription, piece, moves, resources }) => {
