@@ -1,17 +1,9 @@
 import { sanityClient, PortableText } from "../sanity";
 import Link from "next/link";
 
-import { Navbar } from "../components/Navbar";
-
 import {
-  Main,
-  Nav,
-  OpeningsContainer,
   OpeningWrapper,
   Text,
-  ShortText,
-} from "../styles/styles";
-import {
   Black,
   Container,
   Wrapper,
@@ -20,7 +12,7 @@ import {
   Moves,
   White,
   Sup,
-} from "./opening/styles";
+} from "../styles/styles";
 
 const Home = ({ openings }) => {
   return (
