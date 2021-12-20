@@ -3,8 +3,12 @@ import { Reset } from "../../styles/styles";
 
 export const Container = styled.main`
   position: relative;
-  background-color: lightcyan;
-  padding-bottom: 4rem;
+  height: calc(100vh - 2rem);
+
+  @media (min-width: 768px) {
+    border-left: 1px solid black;
+    padding-left: 2.5rem;
+  }
 `;
 
 export const OpeningDetails = styled.article`
@@ -22,11 +26,6 @@ export const Moves = styled.h4`
   font-size: 0.875rem;
   font-weight: normal;
   margin-bottom: 1.25rem;
-`;
-
-export const Description = styled.div`
-  max-width: 65ch;
-  width: 100%;
 `;
 
 export const Sup = styled.sup`
@@ -52,6 +51,17 @@ export const White = styled(piece)`
 `;
 
 export const BackLinkWrapper = styled.div`
+  background-color: #e9e6e4;
   position: absolute;
   bottom: 0;
+  width: 100%;
+  padding: 2rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+`;
+
+export const Wrapper = styled.div`
+  height: 100%;
+  overflow: scroll;
 `;

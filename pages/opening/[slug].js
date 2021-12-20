@@ -7,18 +7,19 @@ import {
   OpeningDetails,
   OpeningName,
   Moves,
-  Description,
   White,
   Sup,
   BackLinkWrapper,
+  Wrapper,
 } from "./styles";
+
+import { Text } from "../../styles/styles";
 import Link from "next/link";
 
 const Opening = ({ name, id, fullDescription, piece, moves, resources }) => {
-  console.log(resources);
   return (
-    <>
-      <Container>
+    <Container>
+      <Wrapper>
         <OpeningDetails>
           <OpeningName>
             <Sup>{id}</Sup>
@@ -27,9 +28,9 @@ const Opening = ({ name, id, fullDescription, piece, moves, resources }) => {
           {piece === "black" ? <Black /> : <White />}
         </OpeningDetails>
         <Moves>{moves}</Moves>
-        <Description>
+        <Text>
           <PortableText blocks={fullDescription} />
-        </Description>
+        </Text>
         {resources.map((item, index) => (
           <div key={index}>
             <Link href={item.url}>{item.resourceName}</Link>
@@ -39,8 +40,8 @@ const Opening = ({ name, id, fullDescription, piece, moves, resources }) => {
           <ArrowLeft />
           <Link href="/">Openings</Link>
         </BackLinkWrapper>
-      </Container>
-    </>
+      </Wrapper>
+    </Container>
   );
 };
 
