@@ -53,6 +53,7 @@ export const OpeningDetails = styled.article`
 
 export const OpeningName = styled.h1`
   ${Reset}
+  font-weight: 600;
   font-size: 2.25rem;
   flex: 1;
 `;
@@ -66,6 +67,8 @@ export const Moves = styled.h4`
 
 export const Sup = styled.sup`
   ${Reset}
+  font-family: 'Reckless Neue TRIAL';
+  font-weight: 400;
   font-size: 1.5rem;
   vertical-align: top;
   margin-right: 1rem;

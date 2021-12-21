@@ -1,5 +1,33 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Mono&family=Karla&family=Playfair+Display:ital@0;1&display=swap");
 
+@font-face {
+  font-family: "Surt";
+  font-weight: normal;
+  font-style: normal;
+  src: url(./fonts/Surt-Light.otf) format("otf");
+}
+
+@font-face {
+  font-family: "Surt";
+  font-weight: 600;
+  font-style: normal;
+  src: url(./fonts/Surt-Medium.otf) format("otf");
+}
+
+@font-face {
+  font-family: "Reckless Neue TRIAL";
+  font-weight: normal;
+  font-style: normal;
+  src: url(./fonts/RecklessNeueTRIAL-Regular.otf) format("otf");
+}
+
+@font-face {
+  font-family: "Reckless Neue TRIAL";
+  font-weight: normal;
+  font-style: italic;
+  src: url(./fonts/RecklessNeueTRIAL-BookItalic.otf) format("otf");
+}
+
 :root {
   --black: #121212;
   --white: #e9e6e4;
@@ -7,7 +35,7 @@
 
 body {
   box-sizing: border-box;
-  font-family: "Karla";
+  font-family: "Surt";
   font-size: 16px;
   line-height: 1.5;
   margin: 0;
