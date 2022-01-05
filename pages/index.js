@@ -3,7 +3,7 @@ import Link from "next/link";
 
 import {
   OpeningWrapper,
-  Text,
+  TextWrapper,
   Black,
   Container,
   Wrapper,
@@ -20,16 +20,6 @@ const Home = ({ openings }) => {
       {openings && (
         <Container>
           <Wrapper>
-            <article>
-              <Text>
-                Below are some of the most common openings in chess for both
-                white and black pieces.{" "}
-              </Text>
-              <Text>
-                If you’re not familiar with chess, make sure you check out the
-                Pieces section to understand how they move.
-              </Text>
-            </article>
             {openings.map((opening) => (
               <Link
                 key={opening.id}
@@ -44,9 +34,9 @@ const Home = ({ openings }) => {
                     {opening.piece === "black" ? <Black /> : <White />}
                   </OpeningDetails>
                   <Moves>{opening.moves}</Moves>
-                  <Text>
+                  <TextWrapper>
                     <PortableText blocks={opening.blurb} />
-                  </Text>
+                  </TextWrapper>
                 </OpeningWrapper>
               </Link>
             ))}
@@ -58,7 +48,7 @@ const Home = ({ openings }) => {
 };
 
 export const getServerSideProps = async () => {
-  const query = '*[ _type == "opening"]';
+  const query = '*[ _type == "opening"] | order(id asc)';
   const openings = await sanityClient.fetch(query);
 
   if (!openings.length) {

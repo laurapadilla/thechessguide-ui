@@ -1,13 +1,17 @@
 import "../styles/globals.css";
-import { Navbar } from "../components/Navbar";
 import { Main } from "../styles/styles";
+import { HeaderBar } from "../components/HeaderBar";
+import { Intro } from "../components/Intro";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <Main>
-      <Navbar />
-      <Component {...pageProps} />
-    </Main>
+    <div>
+      <HeaderBar />
+      <Main>
+        <Intro />
+        <Component {...pageProps} />
+      </Main>
+    </div>
   );
 }
 

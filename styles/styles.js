@@ -6,20 +6,19 @@ export const Reset = css`
 `;
 
 export const Main = styled.main`
-  padding: 1rem;
   display: grid;
   grid-template-columns: 1fr;
-  gap: 3rem;
+  margin-top: 4.5rem;
+  padding: 1rem;
 
   @media (min-width: 768px) {
     grid-template-columns: 1fr 2fr;
+    margin-left: 60px;
+    gap: 3rem;
+    margin-top: 0;
+    padding: 2rem;
   }
 `;
-
-// export const OpeningsContainer = styled.section`
-//   background: transparent;
-//   padding-left: 2rem;
-// `;
 
 export const OpeningWrapper = styled.article`
    {
@@ -28,19 +27,25 @@ export const OpeningWrapper = styled.article`
   }
 `;
 
-export const Text = styled.div`
-  max-width: 55ch;
+export const ShortTextWrapper = css`
+  div {
+    max-width: 30ch;
+  }
+`;
+
+export const TextWrapper = styled.div`
+  max-width: 40ch;
   width: 100%;
+
+  p {
+    ${Reset}
+    margin-bottom: 2rem;
+  }
 `;
 
-export const ShortText = styled(Text)`
-  max-width: 30ch;
-  margin-bottom: 2rem;
-`;
-
-export const Container = styled.main`
+export const Container = styled.section`
   position: relative;
-  height: calc(100vh - 2rem);
+  height: calc(100vh - 4rem);
 
   @media (min-width: 768px) {
     border-left: 1px solid black;
@@ -50,6 +55,11 @@ export const Container = styled.main`
 
 export const OpeningDetails = styled.article`
   display: flex;
+  align-items: center;
+
+  @media (min-width: 768px) {
+    align-items: top;
+  }
 `;
 
 export const OpeningName = styled.h1`

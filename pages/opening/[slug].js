@@ -3,7 +3,7 @@ import { ArrowLeft } from "react-feather";
 import { sanityClient, PortableText } from "../../sanity";
 
 import {
-  Text,
+  TextWrapper,
   Black,
   Container,
   OpeningDetails,
@@ -28,9 +28,9 @@ const Opening = ({ name, id, fullDescription, piece, moves, resources }) => {
           {piece === "black" ? <Black /> : <White />}
         </OpeningDetails>
         <Moves>{moves}</Moves>
-        <Text>
+        <TextWrapper>
           <PortableText blocks={fullDescription} />
-        </Text>
+        </TextWrapper>
         {resources.map((item, index) => (
           <div key={index}>
             <Link href={item.url}>{item.resourceName}</Link>

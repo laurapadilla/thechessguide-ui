@@ -4,28 +4,35 @@
   font-family: "Surt";
   font-weight: normal;
   font-style: normal;
-  src: url(./fonts/Surt-Light.otf) format("otf");
+  src: url(../public/fonts/Surt-Light.otf) format("otf");
+}
+
+@font-face {
+  font-family: "Surt Extended";
+  font-weight: 600;
+  font-style: normal;
+  src: url(../public/fonts/Surt-BoldExtended.otf) format("otf");
 }
 
 @font-face {
   font-family: "Surt";
   font-weight: 600;
   font-style: normal;
-  src: url(./fonts/Surt-Medium.otf) format("otf");
+  src: url(../public/fonts/Surt-Medium.otf) format("otf");
 }
 
 @font-face {
   font-family: "Reckless Neue TRIAL";
   font-weight: normal;
   font-style: normal;
-  src: url(./fonts/RecklessNeueTRIAL-Regular.otf) format("otf");
+  src: url(../public/fonts/RecklessNeueTRIAL-Regular.otf) format("otf");
 }
 
 @font-face {
   font-family: "Reckless Neue TRIAL";
   font-weight: normal;
   font-style: italic;
-  src: url(./fonts/RecklessNeueTRIAL-BookItalic.otf) format("otf");
+  src: url(../public/fonts/RecklessNeueTRIAL-BookItalic.otf) format("otf");
 }
 
 :root {
