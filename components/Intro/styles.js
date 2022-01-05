@@ -1,6 +1,13 @@
 import styled from "styled-components";
 import { ShortTextWrapper, Reset } from "../../styles/styles";
 
+export const IntroWrapper = styled.article`
+  position: sticky;
+  position: -webkit-sticky;
+  top: 1rem;
+  height: 100vh;
+`;
+
 export const IntroText = styled.h1`
   ${ShortTextWrapper}
   ${Reset}

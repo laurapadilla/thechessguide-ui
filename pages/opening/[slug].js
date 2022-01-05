@@ -31,6 +31,7 @@ const Opening = ({ name, id, fullDescription, piece, moves, resources }) => {
         <TextWrapper>
           <PortableText blocks={fullDescription} />
         </TextWrapper>
+        <h3>Resources</h3>
         {resources.map((item, index) => (
           <div key={index}>
             <Link href={item.url}>{item.resourceName}</Link>

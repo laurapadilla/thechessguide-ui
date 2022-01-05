@@ -20,11 +20,24 @@ export const Main = styled.main`
   }
 `;
 
-export const OpeningWrapper = styled.article`
-   {
-    border-bottom: 1px solid black;
-    padding: 1.25rem 0;
+export const Container = styled.section`
+  position: relative;
+
+  @media (min-width: 768px) {
+    border-left: 1px solid black;
+    padding-left: 2.5rem;
   }
+`;
+
+export const Wrapper = styled.div`
+  article:first-child {
+    padding: 0;
+  }
+`;
+
+export const OpeningWrapper = styled.article`
+  border-bottom: 1px solid black;
+  padding: 1.25rem 0;
 `;
 
 export const ShortTextWrapper = css`
@@ -43,16 +56,6 @@ export const TextWrapper = styled.div`
   }
 `;
 
-export const Container = styled.section`
-  position: relative;
-  height: calc(100vh - 4rem);
-
-  @media (min-width: 768px) {
-    border-left: 1px solid black;
-    padding-left: 2.5rem;
-  }
-`;
-
 export const OpeningDetails = styled.article`
   display: flex;
   align-items: center;
@@ -67,6 +70,11 @@ export const OpeningName = styled.h1`
   font-weight: 600;
   font-size: 2.25rem;
   flex: 1;
+
+  &:hover {
+    cursor: pointer;
+    color: #37a969;
+  }
 `;
 
 export const Moves = styled.h4`
@@ -102,16 +110,10 @@ export const White = styled(piece)`
 
 export const BackLinkWrapper = styled.div`
   background-color: #e9e6e4;
-  position: absolute;
-  bottom: 0;
+
   width: 100%;
   padding: 2rem 0;
   display: flex;
   align-items: center;
   gap: 0.25rem;
-`;
-
-export const Wrapper = styled.div`
-  height: 100%;
-  overflow: scroll;
 `;
