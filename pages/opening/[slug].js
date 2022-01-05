@@ -50,7 +50,7 @@ export const getServerSideProps = async (pageContext) => {
 
   const query = `*[ _type == "opening" && slug.current == $pageSlug][0] {
     name, id, piece, blurb, fullDescription, moves, resources[]{...}
-  }`;
+  } `;
   const opening = await sanityClient.fetch(query, { pageSlug });
 
   if (!opening) {

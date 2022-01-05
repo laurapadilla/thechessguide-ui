@@ -32,7 +32,7 @@ const Home = ({ openings }) => {
             </article>
             {openings.map((opening) => (
               <Link
-                key={opening._id}
+                key={opening.id}
                 href={`opening/${opening.slug.current}`}
                 passHref>
                 <OpeningWrapper>
@@ -58,7 +58,7 @@ const Home = ({ openings }) => {
 };
 
 export const getServerSideProps = async () => {
-  const query = '*[ _type == "opening" ]';
+  const query = '*[ _type == "opening"]';
   const openings = await sanityClient.fetch(query);
 
   if (!openings.length) {

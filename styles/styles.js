@@ -35,6 +35,7 @@ export const Text = styled.div`
 
 export const ShortText = styled(Text)`
   max-width: 30ch;
+  margin-bottom: 2rem;
 `;
 
 export const Container = styled.main`
