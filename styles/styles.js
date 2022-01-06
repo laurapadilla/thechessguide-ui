@@ -21,7 +21,6 @@ export const Main = styled.main`
 `;
 
 export const Container = styled.section`
-  position: relative;
   @media (min-width: 768px) {
     border-left: 1px solid black;
     padding-left: 2.5rem;
