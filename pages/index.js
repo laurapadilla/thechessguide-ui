@@ -28,8 +28,8 @@ const Home = ({ openings }) => {
                 <OpeningWrapper>
                   <OpeningDetails>
                     <OpeningName>
-                      <Sup>{opening.id}</Sup>
                       {opening.name}
+                      <Sup>{opening.id}</Sup>
                     </OpeningName>
                     {opening.piece === "black" ? <Black /> : <White />}
                   </OpeningDetails>

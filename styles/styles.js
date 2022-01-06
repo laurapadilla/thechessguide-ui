@@ -89,7 +89,7 @@ export const Sup = styled.sup`
   font-weight: 400;
   font-size: 1.5rem;
   vertical-align: top;
-  margin-right: 1rem;
+  margin-left: 0.5rem;
 `;
 
 export const piece = styled.div`

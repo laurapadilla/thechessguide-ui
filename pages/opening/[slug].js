@@ -22,8 +22,8 @@ const Opening = ({ name, id, fullDescription, piece, moves, resources }) => {
       <Wrapper>
         <OpeningDetails>
           <OpeningName>
-            <Sup>{id}</Sup>
             {name}
+            <Sup>{id}</Sup>
           </OpeningName>
           {piece === "black" ? <Black /> : <White />}
         </OpeningDetails>
