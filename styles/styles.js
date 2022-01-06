@@ -66,7 +66,7 @@ export const OpeningDetails = styled.article`
 
 export const OpeningName = styled.h1`
   ${Reset}
-  font-weight: 600;
+  font-weight: 400;
   font-size: 2.25rem;
   flex: 1;
 

@@ -15,7 +15,7 @@ export const IntroWrapper = styled.article`
 
 export const IntroText = styled.h1`
   ${Reset}
-  font-weight: normal;
+  font-weight: 500;
   line-height: 1.3;
   margin-bottom: 2rem;
   font-size: 1rem;
@@ -31,4 +31,5 @@ export const IntroText = styled.h1`
 export const Italic = styled.span`
   font-style: italic;
   font-family: "Reckless Neue TRIAL";
+  font-weight: 400;
 `;
