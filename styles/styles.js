@@ -22,7 +22,6 @@ export const Main = styled.main`
 
 export const Container = styled.section`
   position: relative;
-
   @media (min-width: 768px) {
     border-left: 1px solid black;
     padding-left: 2.5rem;
@@ -43,6 +42,7 @@ export const OpeningWrapper = styled.article`
 export const ShortTextWrapper = css`
   div {
     max-width: 30ch;
+    width: 100%;
   }
 `;
 
@@ -110,7 +110,6 @@ export const White = styled(piece)`
 
 export const BackLinkWrapper = styled.div`
   background-color: #e9e6e4;
-
   width: 100%;
   padding: 2rem 0;
   display: flex;

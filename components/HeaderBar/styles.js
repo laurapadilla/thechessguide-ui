@@ -9,6 +9,7 @@ export const Header = styled.header`
   top: 0;
   left: 0;
   padding: 1rem;
+  z-index: 1;
 
   @media (min-width: 768px) {
     width: 100vh;
