@@ -8,7 +8,7 @@ export const Reset = css`
 export const Main = styled.main`
   display: grid;
   grid-template-columns: 1fr;
-  margin-top: 4.5rem;
+  margin-top: 3.5rem;
   padding: 1rem;
 
   @media (min-width: 768px) {
@@ -21,9 +21,13 @@ export const Main = styled.main`
 `;
 
 export const Container = styled.section`
+  border-top: 1px solid black;
+  padding-top: 1rem;
   @media (min-width: 768px) {
+    border-top: none;
     border-left: 1px solid black;
     padding-left: 2.5rem;
+    padding-top: 0;
   }
 `;
 
@@ -36,13 +40,6 @@ export const Wrapper = styled.div`
 export const OpeningWrapper = styled.article`
   border-bottom: 1px solid black;
   padding: 1.25rem 0;
-`;
-
-export const ShortTextWrapper = css`
-  div {
-    max-width: 30ch;
-    width: 100%;
-  }
 `;
 
 export const TextWrapper = styled.div`

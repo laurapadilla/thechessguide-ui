@@ -24,10 +24,14 @@ export const Header = styled.header`
 
   h1 {
     ${Reset}
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-family: "Surt Extended";
     text-transform: uppercase;
     letter-spacing: 1px;
     line-height: 1.3;
+
+    @media (min-width: 768px) {
+      font-size: 1.5rem;
+    }
   }
 `;

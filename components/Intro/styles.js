@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { ShortTextWrapper, Reset } from "../../styles/styles";
+import { Reset } from "../../styles/styles";
 
 export const IntroWrapper = styled.article`
   height: auto;
@@ -9,16 +9,19 @@ export const IntroWrapper = styled.article`
     position: -webkit-sticky;
     top: 1rem;
     height: 100vh;
+    border: none;
   }
 `;
 
 export const IntroText = styled.h1`
-  ${ShortTextWrapper}
   ${Reset}
   font-weight: normal;
   line-height: 1.3;
   margin-bottom: 2rem;
   font-size: 1rem;
+  &:last-child {
+    margin-bottom: 1.5rem;
+  }
 
   @media (min-width: 768px) {
     font-size: 1.5rem;
