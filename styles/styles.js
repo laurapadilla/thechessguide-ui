@@ -52,6 +52,9 @@ export const TextWrapper = styled.div`
   p {
     ${Reset}
     margin-bottom: 2rem;
+    &:last-child {
+      margin-bottom: 1rem;
+    }
   }
 `;
 
