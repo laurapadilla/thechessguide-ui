@@ -80,7 +80,13 @@ export const Moves = styled.h4`
   ${Reset}
   font-size: 0.875rem;
   font-weight: normal;
+  line-height: 1;
   margin-bottom: 1.25rem;
+  margin-top: 1rem;
+  background: #121212;
+  color: white;
+  display: inline-block;
+  padding: 0.5rem 0.75rem;
 `;
 
 export const Sup = styled.sup`
